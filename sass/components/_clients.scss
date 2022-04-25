@@ -1,0 +1,42 @@
+.client {
+  @extend %section;
+}
+.client-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-link {
+  color: $icons;
+}
+
+.client-list__item {
+  width: 170px;
+
+}
+
+.client-list__link {
+  @include centeredFlex();
+  height: $retreat;
+  border: 1px solid $icons;
+  color: $icons;
+  border-radius: 4px;
+
+  transition: color 250ms $timing-function,
+  border 250ms $timing-function;
+
+  &:hover {
+    @include hoverAccent();
+    }
+  
+  &:focus {
+    @include hoverAccent();
+  }
+
+}
+
+.client-list__logo {
+  width: 106px;
+  height: 60px;
+  fill: currentColor
+}
